@@ -15,9 +15,9 @@ public class Person extends Animal implements Run, Swim{
         this.secondName = builder.secondName;
         this.middleName = builder.middleName;
         this.pets = builder.pets;
-        if (!builder.pets.isEmpty() && (builder.pets.getLast() instanceof Cat)) {
-                ((Cat) (builder.pets.getLast())).setOwner(this);
-        }
+//        if (!builder.pets.isEmpty() && (builder.pets.getLast() instanceof Cat)) {
+//                ((Cat) (builder.pets.getLast())).setOwner(this);
+//        }
     }
 
     @Override
