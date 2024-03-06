@@ -1,13 +1,19 @@
 package org.example.homework_4;
 
 import org.example.homework_4.lists.GbArrayList;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import org.example.homework_4.lists.GbLinkedList;
 
 public class Main {
     public static void main(String[] args) {
+        GbList<Integer> listLinked = new GbLinkedList<>();
+        listLinked.add(12);
+        listLinked.add(55);
+        System.out.println(listLinked);
+
+
+
+
+
         GbList<Integer> list = new GbArrayList<>();
         list.add(5);
         System.out.println("capacity: = " + ((GbArrayList)list).capacity);

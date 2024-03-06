@@ -13,3 +13,11 @@
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+g
+7src/main/java/org/example/homework_2/animal/Person.java,1\a\1a5f951b1134a8cfcd75ff6f0b4ba41b9e67a4ad
+k
+;src/main/java/org/example/homework_4/lists/GbArrayList.java,a\4\a4770125751df6b43b95ff7a524705eeae95480c
+`
+0src/main/java/org/example/homework_4/GbList.java,4\b\4b8c6fbea2168b22847bd3e64481b2ce67c2cb7b
+l
+<src/main/java/org/example/homework_4/lists/GbLinkedList.java,2\a\2a49659824cc5e52d7bb5e0c4f600bfb9e7e3771
