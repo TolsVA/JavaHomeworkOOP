@@ -55,15 +55,19 @@ public class GbLinkedList<E> implements GbList<E> {
     }
 
     public E get(int index) {
+        if (index < 0 || index >= size){
+            System.out.println("index = " + index + " выходит за пределы коллекции");
+            return null;
+        }
         return getNode(index).data;
     }
 
     private Node<E> getNode(int index) {
         Node<E> node = head;
-        int caunt = 0;
-        while (caunt < index) {
+        int count = 0;
+        while (count < index) {
             node = node.next;
-            caunt++;
+            count++;
         }
         return node;
     }
@@ -72,75 +76,37 @@ public class GbLinkedList<E> implements GbList<E> {
         Node<E> node = head;
         if(value == node.data) return node;
         node = node.next;
-        int caunt = 0;
         while (value != node.data && node != head) {
             node = node.next;
-            caunt++;
         }
-
+        if (node.data != value) {
+            node = null;
+        }
         return node;
     }
 
     @Override
     public void remove(E value) {
-        Node<E> node = head;
-        if(value == node.data);
-        node = node.next;
-        int caunt = 0;
-        while (value != node.data && node != head) {
-            node = node.next;
-            caunt++;
-        }
+        Node<E> node = getNode(value);
+        if (node != null) {
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+            size--;
+        } else System.out.println("Элемент не найден");
     }
 
 
     @Override
     public void removeByIndex(int index) {
-
+        if (index < 0 || index >= size) {
+            System.out.println("index = " + index + " не входит в пределлы диапазона коллекции");
+            return;
+        }
+        Node<E> node = getNode(index);
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        size--;
     }
-
-//    public void removeKeyAll(T key) {
-//        Node<T> find = head;
-//        while (find != null) {
-//            while (find.data != key) {
-//                find = find.next;
-//                if (find == null)
-//                    return;
-//            }
-//
-//            if (find == head)
-//                removeFirst();
-//            else
-//                find.prev.next = find.next;
-//
-//            if (find == tail)
-//                removeLast();
-//            else
-//                find.next.prev = find.prev;
-//
-//            find = find.next;
-//        }
-//    }
-//
-//    public void removeIndex(int index) {
-//        Node<T> find = head;
-//        int c = 0;
-//        while (find != null && c != index) {
-//            find = find.next;
-//            c++;
-//        }
-//
-//        if (find == head)
-//            removeFirst();
-//        else
-//            find.prev.next = find.next;
-//
-//        if (find == tail)
-//            removeLast();
-//        else
-//            find.next.prev = find.prev;
-//
-//    }
 
     @Override
     public int size() {
@@ -175,11 +141,11 @@ public class GbLinkedList<E> implements GbList<E> {
                 return data;
             }
         };
-        int caunt = 0;
+        int count = 0;
         while (iterator.hasNext()) {
-            list[caunt++] = iterator.next();
+            list[count++] = iterator.next();
         }
-        return new ArrayIterator<E>(list);
+        return new ArrayIterator<>(list);
     }
 
     @Override
@@ -195,6 +161,7 @@ public class GbLinkedList<E> implements GbList<E> {
             }
             node = node.next;
         }
+        assert node != null;
         str.append(node.data);
         str.append("]");
         return String.valueOf(str);

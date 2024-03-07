@@ -3,14 +3,16 @@ package org.example.homework_4.lists;
 import org.example.homework_4.GbList;
 import org.example.homework_4.lists.util.ArrayIterator;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class GbArrayList<E> implements GbList<E> {
-
     public E[] values;
     private int size;
     public int capacity;
+
+    public int getCapacity() {
+        return capacity;
+    }
 
     @SuppressWarnings("unchecked")
     public GbArrayList() {
@@ -23,9 +25,15 @@ public class GbArrayList<E> implements GbList<E> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void addCapacity() {
         capacity = capacity + capacity / 2;
-        E[] array = (E[]) new Object[capacity];
+        E[] array = null;
+        try {
+            array = (E[]) new Object[capacity];
+        } catch (ClassCastException e) {
+            System.out.println(e.getMessage());
+        }
         System.arraycopy(values, 0, array, 0, values.length);
         this.values = array;
     }
@@ -39,8 +47,21 @@ public class GbArrayList<E> implements GbList<E> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void add(int index, E value) {
-
+        if (size == capacity) {
+            addCapacity();
+        }
+        E[] tempDonor = values;
+        try {
+            values = (E[]) new Object[capacity];
+        } catch (ClassCastException e) {
+            System.out.println(e.getMessage());
+        }
+        System.arraycopy(tempDonor, 0, values, 0, index);
+        values[index++] = value;
+        System.arraycopy(tempDonor, --index, values, ++index, tempDonor.length - index - 1);
+        size++;
     }
 
     @Override
