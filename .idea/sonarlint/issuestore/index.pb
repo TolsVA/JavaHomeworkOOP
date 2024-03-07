@@ -1,3 +1,25 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+^
+.src/main/java/org/example/homework_1/Main.java,4\2\42822f0225c5afbd2ae24f434b010846bdd70218
+^
+.src/main/java/org/example/homework_2/Main.java,7\9\79c601510a78d5ac789683042f7c406e8eee9c1d
+^
+.src/main/java/org/example/homework_3/Main.java,1\9\19f1f5500ceba9b674ffb55dd30786043fd4eb8f
+^
+.src/main/java/org/example/homework_4/Main.java,4\e\4e544682d11770d03757ec273061534e75eae754
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+g
+7src/main/java/org/example/homework_2/animal/Person.java,1\a\1a5f951b1134a8cfcd75ff6f0b4ba41b9e67a4ad
+k
+;src/main/java/org/example/homework_4/lists/GbArrayList.java,a\4\a4770125751df6b43b95ff7a524705eeae95480c
+`
+0src/main/java/org/example/homework_4/GbList.java,4\b\4b8c6fbea2168b22847bd3e64481b2ce67c2cb7b
+l
+<src/main/java/org/example/homework_4/lists/GbLinkedList.java,2\a\2a49659824cc5e52d7bb5e0c4f600bfb9e7e3771
+r
+Bsrc/main/java/org/example/homework_4/lists/util/ArrayIterator.java,c\8\c8ab0aef9ac80282477891055571c06fdbe6ffba
