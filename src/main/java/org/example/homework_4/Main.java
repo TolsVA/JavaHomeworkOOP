@@ -18,6 +18,28 @@ public class Main {
             System.out.println(integer);
         }
 
+        System.out.println(listLinked.size());
+
+        System.out.println("-----------------------------------");
+
+        for (int i = 0; i < listLinked.size(); i++) {
+            System.out.println(listLinked.get(i));
+        }
+
+
+        listLinked.add(1, 99);
+        System.out.println(listLinked);
+        for (Integer integer : listLinked) {
+            System.out.println(integer);
+        }
+
+        listLinked.add(4, 100);
+        System.out.println(listLinked);
+        for (Integer integer : listLinked) {
+            System.out.println(integer);
+        }
+
+
         List<Integer> arrayList = new LinkedList<>();
 
 

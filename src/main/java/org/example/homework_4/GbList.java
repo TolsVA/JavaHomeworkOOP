@@ -7,4 +7,5 @@ public interface GbList<T> extends Iterable<T> {
     void remove(T value);
     void removeByIndex(int index);
     int size();
+    boolean isEmpty();
 }

@@ -6,9 +6,7 @@ import org.example.homework_4.lists.util.ArrayIterator;
 import java.util.Iterator;
 
 public class GbLinkedList<E> implements GbList<E> {
-    // lesson11_2.collections
     private int size;
-    private int index;
     private Node<E> head;
     private Node<E> tail;
 
@@ -23,9 +21,15 @@ public class GbLinkedList<E> implements GbList<E> {
             this.prev = prev;
         }
     }
+
+    @Override
+    public boolean isEmpty() {
+        return head != null;
+    }
+
     @Override
     public void add(E value) {
-        if (head == null){
+        if (!isEmpty()) {
             head = new Node<>(null, value, null);
             tail = head;
         } else {
@@ -41,17 +45,52 @@ public class GbLinkedList<E> implements GbList<E> {
 
     @Override
     public void add(int index, E value) {
+        if (index > size) return;
 
+        Node<E> node = getNode(index);
+        Node<E> newNode = new Node<>(node.prev, value, node);
+        node.prev.next = newNode;
+        node.prev = newNode;
+        size++;
     }
 
-    @Override
     public E get(int index) {
-        return null;
+        return getNode(index).data;
+    }
+
+    private Node<E> getNode(int index) {
+        Node<E> node = head;
+        int caunt = 0;
+        while (caunt < index) {
+            node = node.next;
+            caunt++;
+        }
+        return node;
+    }
+
+    private Node<E> getNode(E value) {
+        Node<E> node = head;
+        if(value == node.data) return node;
+        node = node.next;
+        int caunt = 0;
+        while (value != node.data && node != head) {
+            node = node.next;
+            caunt++;
+        }
+
+        return node;
     }
 
     @Override
     public void remove(E value) {
-
+        Node<E> node = head;
+        if(value == node.data);
+        node = node.next;
+        int caunt = 0;
+        while (value != node.data && node != head) {
+            node = node.next;
+            caunt++;
+        }
     }
 
 
@@ -59,6 +98,49 @@ public class GbLinkedList<E> implements GbList<E> {
     public void removeByIndex(int index) {
 
     }
+
+//    public void removeKeyAll(T key) {
+//        Node<T> find = head;
+//        while (find != null) {
+//            while (find.data != key) {
+//                find = find.next;
+//                if (find == null)
+//                    return;
+//            }
+//
+//            if (find == head)
+//                removeFirst();
+//            else
+//                find.prev.next = find.next;
+//
+//            if (find == tail)
+//                removeLast();
+//            else
+//                find.next.prev = find.prev;
+//
+//            find = find.next;
+//        }
+//    }
+//
+//    public void removeIndex(int index) {
+//        Node<T> find = head;
+//        int c = 0;
+//        while (find != null && c != index) {
+//            find = find.next;
+//            c++;
+//        }
+//
+//        if (find == head)
+//            removeFirst();
+//        else
+//            find.prev.next = find.next;
+//
+//        if (find == tail)
+//            removeLast();
+//        else
+//            find.next.prev = find.prev;
+//
+//    }
 
     @Override
     public int size() {
@@ -79,22 +161,23 @@ public class GbLinkedList<E> implements GbList<E> {
         Iterator<E> iterator = new Iterator<>() {
             private Node<E> node = head;
             private int index = 0;
+
             @Override
             public boolean hasNext() {
-                return index < size;
+                return this.index < size;
             }
 
             @Override
             public E next() {
                 E data = node.data;
                 node = node.next;
-                index++;
+                this.index++;
                 return data;
             }
         };
-        int index = 0;
-        while (iterator.hasNext()){
-            list[index++] = iterator.next();
+        int caunt = 0;
+        while (iterator.hasNext()) {
+            list[caunt++] = iterator.next();
         }
         return new ArrayIterator<E>(list);
     }

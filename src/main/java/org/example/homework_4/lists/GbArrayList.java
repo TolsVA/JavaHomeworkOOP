@@ -79,6 +79,11 @@ public class GbArrayList<E> implements GbList<E> {
     }
 
     @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return new ArrayIterator<>(values);
     }

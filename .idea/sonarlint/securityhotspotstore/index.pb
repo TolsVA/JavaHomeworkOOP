@@ -21,3 +21,5 @@ k
 0src/main/java/org/example/homework_4/GbList.java,4\b\4b8c6fbea2168b22847bd3e64481b2ce67c2cb7b
 l
 <src/main/java/org/example/homework_4/lists/GbLinkedList.java,2\a\2a49659824cc5e52d7bb5e0c4f600bfb9e7e3771
+r
+Bsrc/main/java/org/example/homework_4/lists/util/ArrayIterator.java,c\8\c8ab0aef9ac80282477891055571c06fdbe6ffba
