@@ -4,8 +4,6 @@ import org.example.homework_4.GbList;
 import org.example.homework_4.lists.util.ArrayIterator;
 
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 
 public class GbLinkedList<E> implements GbList<E> {
     private int size;
@@ -135,38 +133,38 @@ public class GbLinkedList<E> implements GbList<E> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
+//    @SuppressWarnings("unchecked")
     public Iterator<E> iterator() {
-        // Здесь масло масленное.
+/*        // Здесь масло масленное.
         // Но цель достигнута прикрутил ArrayIterator
-//        E[] list;
-//        try {
-//            list = (E[]) new Object[size];
-//        } catch (ClassCastException e) {
-//            throw new RuntimeException(e);
-//        }
-//        Iterator<E> iterator = new Iterator<>() {
-//            private Node<E> node = head;
-//            private int index = 0;
-//
-//            @Override
-//            public boolean hasNext() {
-//                return this.index < size;
-//            }
-//
-//            @Override
-//            public E next() {
-//                E data = node.data;
-//                node = node.next;
-//                this.index++;
-//                return data;
-//            }
-//        };
-//        int count = 0;
-//        while (iterator.hasNext()) {
-//            list[count++] = iterator.next();
-//        }
-//        return new ArrayIterator<>(list);
+        E[] list;
+        try {
+            list = (E[]) new Object[size];
+        } catch (ClassCastException e) {
+            throw new RuntimeException(e);
+        }
+        Iterator<E> iterator = new Iterator<>() {
+            private Node<E> node = head;
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return this.index < size;
+            }
+
+            @Override
+            public E next() {
+                E data = node.data;
+                node = node.next;
+                this.index++;
+                return data;
+            }
+        };
+        int count = 0;
+        while (iterator.hasNext()) {
+            list[count++] = iterator.next();
+        }
+        return new ArrayIterator<>(list);*/
             return new ArrayIterator<>(toArray());
     }
 
