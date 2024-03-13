@@ -1,9 +1,12 @@
-package org.example.solid_hom_6.srp1.figure;
+package org.example.solid_hom_6.srp1.figure.squar;
+
+import org.example.solid_hom_6.srp1.figure.Point;
+import org.example.solid_hom_6.srp1.figure.Shape;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Square {
+public class Square extends Shape {
 
     private final List<Point> points;
     private final int side;

@@ -1,8 +1,8 @@
 package org.example.solid_hom_6.srp1;
 
-import org.example.solid_hom_6.srp1.figure.Point;
-import org.example.solid_hom_6.srp1.figure.Square;
-import org.example.solid_hom_6.srp1.figure.SquarePrint;
+import org.example.solid_hom_6.srp1.figure.*;
+import org.example.solid_hom_6.srp1.figure.squar.Square;
+import org.example.solid_hom_6.srp1.figure.squar.SquarePrint;
 
 public class Main {
     public static void main(String[] args) {

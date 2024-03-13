@@ -1,6 +1,8 @@
-package org.example.solid_hom_6.srp1.figure;
+package org.example.solid_hom_6.srp1.figure.squar;
 
-public class SquarePrint {
+import org.example.solid_hom_6.srp1.figure.Malevich;
+
+public class SquarePrint implements Malevich<Square> {
     public void draw(Square square) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < square.getSide(); i++) {
