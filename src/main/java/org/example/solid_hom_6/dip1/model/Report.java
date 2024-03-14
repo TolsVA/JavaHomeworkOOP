@@ -1,11 +1,9 @@
 package org.example.solid_hom_6.dip1.model;
 
-import org.example.solid_hom_6.dip1.model.util.ReportPrinter;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Report{
+public class Report {
     private List<ReportItem> items;	// report data
 
     // calculate report data
@@ -15,8 +13,7 @@ public class Report{
         items.add(new ReportItem("Second", (float)6));
     }
 
-    public void output(){
-        ReportPrinter reportPrint = new ReportPrinter();
-        reportPrint.output(items);
+    public List<ReportItem> getItems() {
+        return items;
     }
 }

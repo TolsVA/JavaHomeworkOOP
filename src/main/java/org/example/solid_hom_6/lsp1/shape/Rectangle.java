@@ -1,20 +1,12 @@
 package org.example.solid_hom_6.lsp1.shape;
 
-public class Rectangle {
+public class Rectangle implements Quadrilateral {
     private int sideA;
     private int sideB;
 
     public Rectangle(int sideA, int sideB) {
         this.setSideA(sideA);
         this.setSideB(sideB);
-    }
-
-    public int getSideA() {
-        return sideA;
-    }
-
-    public int getSideB() {
-        return sideB;
     }
 
     public void setSideA(int sideA) {
@@ -25,7 +17,8 @@ public class Rectangle {
         this.sideB = sideB;
     }
 
-    public int getArea() {
-        return sideA * sideB;
+    @Override
+    public double getArea() {
+        return (double) sideA * sideB;
     }
 }

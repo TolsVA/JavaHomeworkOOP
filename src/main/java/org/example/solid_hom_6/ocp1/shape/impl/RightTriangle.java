@@ -1,6 +1,5 @@
 package org.example.solid_hom_6.ocp1.shape.impl;
 
-
 import org.example.solid_hom_6.ocp1.shape.Shape;
 
 public class RightTriangle implements Shape {
@@ -24,5 +23,10 @@ public class RightTriangle implements Shape {
 
     public double getHypotenuse() {
         return hypotenuse;
+    }
+
+    @Override
+    public double square() {
+        return leg1 * leg2 / 2.0;
     }
 }

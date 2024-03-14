@@ -1,16 +1,15 @@
 package org.example.solid_hom_6.lsp1.view;
 
-import org.example.solid_hom_6.lsp1.shape.Rectangle;
+import org.example.solid_hom_6.lsp1.shape.Quadrilateral;
+public class ShapeView<T extends Quadrilateral> {
+    private final T quadrilateral;
 
-public class ShapeView {
-    private final Rectangle rectangle;
-
-    public ShapeView(Rectangle rectangle) {
-        this.rectangle = rectangle;
+    public ShapeView(T quadrilateral) {
+        this.quadrilateral = quadrilateral;
     }
 
     public void showArea() {
         System.out.print("Area of rectangle equal:");
-        System.out.println(rectangle.getArea());
+        System.out.println(quadrilateral.getArea());
     }
 }
