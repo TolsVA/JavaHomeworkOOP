@@ -6,6 +6,6 @@ public class RectanglPrinter implements Malevich<Rectangl> {
 
     @Override
     public void draw(Rectangl shape) {
-
+        System.out.println("Что то есть");
     }
 }

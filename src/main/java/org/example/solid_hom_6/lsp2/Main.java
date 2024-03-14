@@ -2,6 +2,7 @@ package org.example.solid_hom_6.lsp2;
 
 
 import org.example.solid_hom_6.lsp2.factory.OrderFactory;
+import org.example.solid_hom_6.lsp2.model.AbstractOrder;
 import org.example.solid_hom_6.lsp2.model.Order;
 import org.example.solid_hom_6.lsp2.util.OrderCalculator;
 
@@ -12,7 +13,7 @@ public class Main {
         calculator.add(creator.create(3, 2, false));
         calculator.add(creator.create(1, 3, true));
 
-        for (Order order : calculator) {
+        for (AbstractOrder order : calculator) {
             System.out.println(order);
         }
 

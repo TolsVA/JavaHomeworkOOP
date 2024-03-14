@@ -1,9 +1,6 @@
 package org.example.solid_hom_6.srp2;
 
-import org.example.solid_hom_6.srp2.model.Client;
-import org.example.solid_hom_6.srp2.model.MyConsole;
-import org.example.solid_hom_6.srp2.model.Order;
-import org.example.solid_hom_6.srp2.model.Product;
+import org.example.solid_hom_6.srp2.model.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,10 +11,7 @@ public class Main {
                 Integer.parseInt(console.prompt("Quantity: ")),
                 Integer.parseInt(console.prompt("Price: "))
         );
-
-//        System.out.println("Enter order:");
-//        Order order = new Order("", "", 0, 0);
-//        order.inputFromConsole();
-//        order.saveToJson();
+        Order order = new Order(client, product, new SaveToJson());
+        order.saveToJson(order);
     }
 }

@@ -1,7 +1,7 @@
 package org.example.solid_hom_6.srp2.model;
 
 public class Client {
-    String name;
+    private String name;
 
     public Client(String name) {
         this.name = name;

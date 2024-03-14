@@ -16,7 +16,7 @@ import static java.lang.System.*;
 public class UserRepository implements GBRepository {
     private final UserMapper mapper;
     private final String fileName;
-    List<Observer> observers = new ArrayList<>();
+    Observer observer;
     public UserRepository() {
         this.mapper = new UserMapper();
 
@@ -153,13 +153,11 @@ public class UserRepository implements GBRepository {
 
     @Override
     public void addObserver(Observer observer) {
-        observers.add(observer);
+        this.observer = observer;
     }
 
     @Override
     public void notifyObserver(String message) {
-        for (Observer observer: observers){
-            observer.print(message);
-        }
+        observer.print(message);
     }
 }

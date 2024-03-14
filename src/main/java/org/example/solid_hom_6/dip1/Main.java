@@ -10,9 +10,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
-//    private static final Logger log = Log.log(Main.class.getName());
+    private static final Logger log = Log.log(Main.class.getName());
     public static void main(String[] args) {
-//        log.log(Level.INFO, "Method main in model package started");
+        log.log(Level.INFO, "Method main in model package started");
         Report report = new Report();
         report.calculate();
         ReportMenager rm = new ReportMenager(new ReportPrinter());
