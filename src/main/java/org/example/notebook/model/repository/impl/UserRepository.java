@@ -16,7 +16,7 @@ import static java.lang.System.*;
 public class UserRepository implements GBRepository {
     private final UserMapper mapper;
     private final String fileName;
-    Observer observer;
+    private Observer observer;
     public UserRepository() {
         this.mapper = new UserMapper();
 

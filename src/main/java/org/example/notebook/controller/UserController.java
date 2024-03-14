@@ -58,4 +58,8 @@ public class UserController {
     public void createUser() {
         saveUser(uv.createUser());
     }
+
+    public String prompt(String message) {
+        return uv.prompt(message);
+    }
 }

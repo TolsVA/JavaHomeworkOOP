@@ -2,7 +2,6 @@ package org.example.notebook.view;
 
 import org.example.notebook.controller.UserController;
 import org.example.notebook.util.Commands;
-import org.example.notebook.util.UserValidator;
 
 import java.util.Arrays;
 
@@ -10,7 +9,6 @@ import static java.lang.System.*;
 
 public class UserView implements Observer{
     private final UserController userController;
-    private final UserValidator uv = new UserValidator();
 
     public UserView(UserController userController) {
         this.userController = userController;
@@ -19,10 +17,10 @@ public class UserView implements Observer{
         Commands com;
 
         while (true) {
-            String command = uv.prompt("Введите команду: ").toUpperCase();
+            String command = userController.prompt("Введите команду: ").toUpperCase();
             while (!isContains(command)) {
                 print("Такой команды нет!!!\nСписок команд: -> " + Arrays.toString(Commands.values()) + "\n");
-                command = uv.prompt("Введите команду: ").toUpperCase();
+                command = userController.prompt("Введите команду: ").toUpperCase();
             }
 
             com = Commands.valueOf(command);
