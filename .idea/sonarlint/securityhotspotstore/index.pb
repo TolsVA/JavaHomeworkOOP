@@ -230,3 +230,5 @@ u
 Esrc/main/java/org/example/calculator_complex_number/ui/Publisher.java,1\f\1fe9c294e1bbfec73ff77c35a446bf613dab6a1a
 ‚
 Rsrc/main/java/org/example/calculator_complex_number/ui/calculator/impl/Method.java,3\9\39af8d374ced072bc31108cafbe413c1bff79c55
+s
+Csrc/main/java/org/example/calculator_complex_number/logger/Log.java,0\d\0da880b8597d7149261ce0a5cfef676b0b2f2faa

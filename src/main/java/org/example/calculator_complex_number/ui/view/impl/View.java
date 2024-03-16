@@ -3,10 +3,14 @@ package org.example.calculator_complex_number.ui.view.impl;
 import org.example.calculator_complex_number.ui.calculator.impl.Complex;
 import org.example.calculator_complex_number.ui.Method;
 import org.example.calculator_complex_number.ui.view.Observer;
+import org.example.solid_hom_6.dip1.Main;
+import org.example.solid_hom_6.logger.Log;
 
-import static java.lang.System.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class View implements Observer{
+    private static final Logger log = Log.log(Main.class.getName());
     private Complex c1;
     private Complex c2;
     public void run() {
@@ -20,6 +24,6 @@ public class View implements Observer{
 
     @Override
     public void print(Complex complex, String name) {
-        out.printf("%s%%n".formatted(name), c1, c2, complex);
+        log.log(Level.INFO, () -> String.format(name, c1, c2, complex));
     }
 }
