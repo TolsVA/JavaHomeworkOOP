@@ -22,12 +22,12 @@ public class Employee  {
         private Person person;
         private Profession post;
         
-        public Builder setPerson(Person person) {
+        public Builder person(Person person) {
             this.person = person;
             return self();
         }
 
-        public Builder setPost(Profession post) {
+        public Builder post(Profession post) {
             this.post = post;
             return self();
         }

@@ -17,22 +17,22 @@ public abstract class Animal {
         private String gender;
         private String location;
 
-        public T setName(String name) {
+        public T name(String name) {
             this.name = name;
             return self();
         }
 
-        public T setBirthDay(LocalDate birthDay) {
+        public T birthDay(LocalDate birthDay) {
             this.birthDay = birthDay;
             return self();
         }
 
-        public T setGender(String gender) {
+        public T gender(String gender) {
             this.gender = gender;
             return self();
         }
 
-        public T setLocation(String location) {
+        public T location(String location) {
             this.location = location;
             return self();
         }

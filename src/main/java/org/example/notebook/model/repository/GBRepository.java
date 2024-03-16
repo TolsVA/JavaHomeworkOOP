@@ -6,7 +6,7 @@ import org.example.notebook.view.Observer;
 import java.util.List;
 import java.util.Optional;
 
-public interface GBRepository {
+public interface GBRepository extends Publisher {
     void findAll();
     void create(User user);
     Optional<User> findById(Long id);
@@ -14,6 +14,4 @@ public interface GBRepository {
     void delete(Long id);
     List<String> readAll();
     void saveAll(List<String> data);
-    void addObserver(Observer observer);
-    void notifyObserver(String message);
 }

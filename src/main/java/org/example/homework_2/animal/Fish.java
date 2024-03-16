@@ -11,7 +11,7 @@ public class Fish extends Animal implements Swim{
     public static class Builder extends Animal.Builder<Builder>{
         private Person owner;
 
-        public Builder setOwner(Person owner) {
+        public Builder owner(Person owner) {
             this.owner = owner;
             return self();
         }

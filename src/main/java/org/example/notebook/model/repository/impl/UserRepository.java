@@ -2,6 +2,7 @@ package org.example.notebook.model.repository.impl;
 
 import org.example.notebook.model.User;
 import org.example.notebook.model.repository.GBRepository;
+import org.example.notebook.model.repository.Publisher;
 import org.example.notebook.util.DBConnector;
 import org.example.notebook.util.mapper.impl.UserMapper;
 import org.example.notebook.view.Observer;

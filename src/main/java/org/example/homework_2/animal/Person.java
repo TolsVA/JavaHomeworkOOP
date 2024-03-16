@@ -10,7 +10,7 @@ public class Person extends Animal implements Run, Swim{
     private static final double MAX_RUN = 10.0;
     private static final double MAX_SWIM = 10.0;
     private final List<Animal> pets;
-    Person(Builder builder) {
+    private Person(Builder builder) {
         super(builder);
         this.secondName = builder.secondName;
         this.middleName = builder.middleName;
@@ -39,17 +39,17 @@ public class Person extends Animal implements Run, Swim{
         private String middleName;
         private final List<Animal> pets = new MyArrayList<>();
 
-        public Builder setSecondName(String secondName) {
+        public Builder secondName(String secondName) {
             this.secondName = secondName;
             return self();
         }
 
-        public Builder setMiddleName(String middleName) {
+        public Builder middleName(String middleName) {
             this.middleName = middleName;
             return self();
         }
 
-        public Builder setPets(Animal animal) {
+        public Builder pets(Animal animal) {
             pets.add(animal);
             return self();
         }

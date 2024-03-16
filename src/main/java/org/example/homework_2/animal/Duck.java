@@ -13,7 +13,7 @@ public class Duck extends Animal implements Run, Swim,Fly{
     public static class Builder extends Animal.Builder<Builder>{
         private Person owner;
 
-        public Builder setOwner(Person owner) {
+        public Builder owner(Person owner) {
             this.owner = owner;
             return self();
         }

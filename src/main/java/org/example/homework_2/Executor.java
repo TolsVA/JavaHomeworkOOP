@@ -15,33 +15,33 @@ public class Executor {
     public void startProgram() {
         String city = "Красноярск";
         Cat catVasily = new Cat.Builder()
-                .setName("Васька")
-                .setGender("Кот")
-                .setBirthDay(LocalDate.of(2023, 8, 5))
-                .setLocation(city)
+                .name("Васька")
+                .gender("Кот")
+                .birthDay(LocalDate.of(2023, 8, 5))
+                .location(city)
                 .build();
 
         Fish fishDolli = new Fish.Builder()
-//                .setBirthDay(LocalDate.of(2022, 5, 18))
-                .setName("Dolli")
+//                .birthDay(LocalDate.of(2022, 5, 18))
+                .name("Dolli")
                 .build();
 
         Person person1 = new Person.Builder()
-                .setSecondName("Иванов")
-                .setName("Иван")
-                .setMiddleName("Иванович")
-                .setGender("Мужской")
-                .setBirthDay(LocalDate.of(1992, 8, 31))
-                .setLocation(city)
-                .setPets(catVasily)
-                .setPets(fishDolli)
+                .secondName("Иванов")
+                .name("Иван")
+                .middleName("Иванович")
+                .gender("Мужской")
+                .birthDay(LocalDate.of(1992, 8, 31))
+                .location(city)
+                .pets(catVasily)
+                .pets(fishDolli)
                 .build();
 
         Person person2 = new Person.Builder()
-                .setName("Екатерина")
-                .setGender("Женский")
-                .setBirthDay(LocalDate.of(1995, 5, 5))
-                .setLocation(city)
+                .name("Екатерина")
+                .gender("Женский")
+                .birthDay(LocalDate.of(1995, 5, 5))
+                .location(city)
                 .build();
 
         person2.setSecondName("Сидорова");
@@ -50,16 +50,16 @@ public class Executor {
         catVasily.setOwner(person1);
         fishDolli.setOwner(person1);
         Animal duck = new Duck.Builder()
-                .setName("Дикая утка").build();
+                .name("Дикая утка").build();
 
         Employee emp = new Employee.Builder()
-                .setPerson(person1)
-                .setPost(new Doctor("Доктор", 11, 1500))
+                .person(person1)
+                .post(new Doctor("Доктор", 11, 1500))
                 .build();
 
         Employee emp2 = new Employee.Builder()
-                .setPerson(person2)
-                .setPost(new Nurse("Мед сестра", 12, 1000))
+                .person(person2)
+                .post(new Nurse("Мед сестра", 12, 1000))
                 .build();
 
         VetClinic vetClinic = new VetClinic(22222, "Ёжик", "Красноярск ул. Такая то");
