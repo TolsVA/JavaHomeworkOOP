@@ -1,12 +1,13 @@
 package org.example.calculator_complex_number.ui.view.impl;
 
+import org.example.calculator_complex_number.Main;
+import org.example.calculator_complex_number.logger.Log;
 import org.example.calculator_complex_number.ui.view.presenter.CalcValidatorIpl;
 import org.example.calculator_complex_number.ui.view.presenter.Presenter;
 import org.example.calculator_complex_number.ui.view.ShowView;
 import org.example.calculator_complex_number.ui.calculator.impl.Commands;
 import org.example.calculator_complex_number.ui.calculator.ComplexNumber;
-import org.example.solid_hom_6.dip1.Main;
-import org.example.solid_hom_6.logger.Log;
+
 
 import java.util.Arrays;
 import java.util.logging.Level;

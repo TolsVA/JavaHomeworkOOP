@@ -324,3 +324,5 @@ Rsrc/main/java/org/example/calculator_complex_number/ui/view/ManagerConsolable.j
 Msrc/main/java/org/example/calculator_complex_number/ui/view/impl/ViewWeb.java,f\7\f7378a07c21681949c5f8c95666d57ff2b91b3d4
 Å
 Qsrc/main/java/org/example/calculator_complex_number/ui/view/impl/ViewConsole.java,5\d\5d5b69ee54c5c4d850bb1d13296e924b7910c7ac
+?
+log.0.0.txt.lck,3\7\3716a5092ab63624b791610aa564446c8035f24c

@@ -5,6 +5,8 @@ import org.example.calculator_complex_number.ui.calculator.impl.Commands;
 import org.example.calculator_complex_number.ui.calculator.ComplexNumber;
 import org.example.calculator_complex_number.ui.view.ShowView;
 
+import static java.lang.System.*;
+
 public class Presenter {
     private final ShowView showView;
     private final ConsoleManager consoleManager;
@@ -25,9 +27,9 @@ public class Presenter {
     }
 
     public ComplexNumber apply(Commands com) {
-        System.out.println("Первое комлексное число");
+        out.println("Первое комлексное число");
         ComplexNumber c1 = createComplexNumber();
-        System.out.println("Второе комлексное число");
+        out.println("Второе комлексное число");
         ComplexNumber c2 = createComplexNumber();
         ComplexNumber complexNumberResult = com.getFunction().calculation(c1, c2);
         showView.showResult(complexNumberResult, c1, c2);

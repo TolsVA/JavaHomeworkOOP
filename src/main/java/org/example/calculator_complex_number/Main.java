@@ -1,9 +1,9 @@
 package org.example.calculator_complex_number;
 
-import org.example.calculator_complex_number.ui.ApplicationRunner;
+import org.example.calculator_complex_number.ui.view.impl.View;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationRunner.run();
+        new View().run();
     }
 }
